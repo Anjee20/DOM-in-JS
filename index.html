@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //Lets create a i tag
+            //2. Variable Initialization
+            i = document.createElement('i');
+            i.setAttribute('class','fas');
+            i.classList.add('fa-home');
+            console.log(i);
+
+            document.body.appendChild(i);
+
+            //lets create a script tag
+            let s = document.createElement('link');
+            s.setAttribute('rel','stylesheet');
+            s.setAttribute('href','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css')
+            console.log(s);
+
+            document.head.appendChild(s);
+
+            //JS Hoisting
+            //You can declare the variable after the Initialization
+            //1. Variable Declaration
+            var i;
+
+            
+        </script>
+        
+    </body>
+</html>
