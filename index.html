@@ -3,9 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>DOM Elements</title>
     </head>
     <body>
+
+        <!--     insertBefore() Method in HTML -->
+        <h1>Students List:</h1>
+        <ul id="myStud">
+            <li>Anjali</li>
+            <li>Jignesh</li>
+        </ul>
+        <button onclick="addNewStudent()">Add New Student</button>
+
+        <script>
+
+            function addNewStudent(studname){
+                var sn = prompt('Enter New Student Name:');
+                console.log(sn);
+
+                l = document.createElement('li');
+                l.innerHTML = sn;
+                console.log(l);
+
+                //var tn = document.createTextNode(sn);
+                //console.log(tn);
+                //l.append(tn);
+                //console.log(l);
+                
+                const list = document.getElementById('myStud');
+                console.log(list);
+                list.insertBefore(l, list.children[1]);
+
+                //list.insertBefore(l, null);//to add End of the list
+
+            }            
+
+            var l;// Js Hosisting
+
+        </script>
+
+        <!--  JavaScript DOM Elements  -->
         <script>
             //Lets create a i tag
             //2. Variable Initialization
@@ -14,6 +51,7 @@
             i.classList.add('fa-home');
             console.log(i);
 
+            document.write("<br><br><br>");
             document.body.appendChild(i);
 
             //lets create a script tag
@@ -27,10 +65,9 @@
             //JS Hoisting
             //You can declare the variable after the Initialization
             //1. Variable Declaration
-            var i;
-
+            var i;           
             
-        </script>
+        </script>    
         
     </body>
 </html>
